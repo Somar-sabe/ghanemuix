@@ -1,0 +1,153 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "title": "Echo Buds (2nd Gen)",
+      "price": 89.99,
+      "currency": "USD",
+      "rating": 4.3,
+      "category": "Audio",
+      "score": 86,
+      "marketplace": "Amazon",
+      "buyUrl": "https://www.amazon.com/dp/B085WT7B8H",
+      "image": "https://picsum.photos/seed/echobuds/600/600",
+      "alt": "Black wireless earbuds",
+      "summary": "ANC earbuds with Alexa."
+    },
+    {
+      "id": "p2",
+      "title": "Mi Smart Air Fryer 3.5L",
+      "price": 299.0,
+      "currency": "AED",
+      "rating": 4.6,
+      "category": "Appliances",
+      "score": 90,
+      "marketplace": "Noon",
+      "buyUrl": "https://www.noon.com/uae-en/xyz",
+      "image": "https://picsum.photos/seed/airfryer/600/600",
+      "alt": "White air fryer",
+      "summary": "App control, 3.5L capacity."
+    },
+    {
+      "id": "p3",
+      "title": "Cordless Mini Vacuum",
+      "price": 24.99,
+      "currency": "USD",
+      "rating": 4.1,
+      "category": "Home",
+      "score": 78,
+      "marketplace": "Temu",
+      "buyUrl": "https://www.temu.com/item/123",
+      "image": "https://picsum.photos/seed/minivac/600/600",
+      "alt": "Handheld mini vacuum",
+      "summary": "USB-C charge, car/desk."
+    },
+    {
+      "id": "p4",
+      "title": "SHEIN Minimalist Sneakers",
+      "price": 119.0,
+      "currency": "AED",
+      "rating": 4.4,
+      "category": "Fashion",
+      "score": 82,
+      "marketplace": "SHEIN",
+      "buyUrl": "https://www.shein.com/item/456",
+      "image": "https://picsum.photos/seed/sneakers/600/600",
+      "alt": "White minimalist sneakers",
+      "summary": "Lightweight casual shoes."
+    },
+    {
+      "id": "p5",
+      "title": "Anker 20W USB-C Charger",
+      "price": 14.99,
+      "currency": "USD",
+      "rating": 4.8,
+      "category": "Accessories",
+      "score": 93,
+      "marketplace": "Amazon",
+      "buyUrl": "https://www.amazon.com/dp/B08L5M9BTJ",
+      "image": "https://picsum.photos/seed/charger/600/600",
+      "alt": "USB-C wall charger",
+      "summary": "Fast charge compact brick."
+    },
+    {
+      "id": "p6",
+      "title": "Stainless Water Bottle 1L",
+      "price": 49.0,
+      "currency": "AED",
+      "rating": 4.5,
+      "category": "Outdoors",
+      "score": 80,
+      "marketplace": "Noon",
+      "buyUrl": "https://www.noon.com/uae-en/abc",
+      "image": "https://picsum.photos/seed/bottle/600/600",
+      "alt": "Insulated steel bottle",
+      "summary": "Keeps drinks cold 24h."
+    },
+    {
+      "id": "p7",
+      "title": "Wireless Keyboard & Mouse",
+      "price": 21.99,
+      "currency": "USD",
+      "rating": 4.0,
+      "category": "Computers",
+      "score": 76,
+      "marketplace": "Temu",
+      "buyUrl": "https://www.temu.com/item/789",
+      "image": "https://picsum.photos/seed/kbm/600/600",
+      "alt": "Slim keyboard and mouse",
+      "summary": "2.4G set, quiet keys."
+    }
+  ],
+  "favorites": ["p1", "p2", "p3", "p4"],
+  "viewed": ["p5", "p6", "p7"],
+  "chats": [
+    {
+      "id": "c1",
+      "title": "Find workout earbuds",
+      "createdAt": "2025-10-17T07:05:00Z",
+      "messages": [
+        { "id": "m1", "role": "user", "text": "Need sweat-proof earbuds under $100." },
+        { "id": "m2", "role": "ai", "text": "Got it. Prioritize ANC or battery life?" },
+        { "id": "m3", "role": "user", "text": "Battery life." },
+        { "id": "m4", "role": "ai", "type": "product-grid", "products": ["p1"] }
+      ]
+    },
+    {
+      "id": "c2",
+      "title": "Best compact charger",
+      "createdAt": "2025-10-16T18:22:00Z",
+      "messages": [
+        { "id": "m1", "role": "user", "text": "Small USB-C fast charger?" },
+        { "id": "m2", "role": "ai", "type": "product-grid", "products": ["p5"] }
+      ]
+    },
+    {
+      "id": "c3",
+      "title": "Air fryer for 2 people",
+      "createdAt": "2025-10-16T10:10:00Z",
+      "messages": [
+        { "id": "m1", "role": "user", "text": "Air fryer, compact, app control." },
+        { "id": "m2", "role": "ai", "type": "product-grid", "products": ["p2"] }
+      ]
+    },
+    {
+      "id": "c4",
+      "title": "Budget desk setup",
+      "createdAt": "2025-10-15T20:40:00Z",
+      "messages": [
+        { "id": "m1", "role": "user", "text": "Cheap keyboard + mouse, quiet." },
+        { "id": "m2", "role": "ai", "type": "product-grid", "products": ["p7"] }
+      ]
+    },
+    {
+      "id": "c5",
+      "title": "Everyday water bottle",
+      "createdAt": "2025-10-15T08:00:00Z",
+      "messages": [
+        { "id": "m1", "role": "user", "text": "Leak-proof bottle for commute." },
+        { "id": "m2", "role": "ai", "type": "product-grid", "products": ["p6"] }
+      ]
+    }
+  ]
+}
