@@ -92,31 +92,55 @@ export function ChatWindow({
       </div>
 
       {/* Input Area */}
-      <div className="border-t border-border p-4 bg-background">
-        <div className="max-w-4xl mx-auto flex gap-2">
-          <Textarea
-            ref={textareaRef}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Ask about products, compare prices, or find deals..."
-            className="resize-none min-h-[44px] max-h-32"
-            rows={1}
-            data-testid="input-chat-message"
-            aria-label="Type your message"
-          />
-          <Button
-            size="icon"
-            onClick={handleSend}
-            disabled={!input.trim()}
-            data-testid="button-send-message"
-            aria-label="Send message"
-            className="flex-shrink-0"
-          >
-            <Send className="h-5 w-5" />
-          </Button>
-        </div>
-      </div>
+{/* ChatGPT-like Input Area */}
+<div className="p-4 bg-background border-t border-border">
+  <div className="max-w-3xl mx-auto grid grid-cols-[auto_1fr_auto] items-end gap-2 rounded-[28px] shadow-sm bg-white/60 backdrop-blur-md px-4 py-2.5 transition focus-within:ring-2 focus-within:ring-black/10 dark:bg-[#303030]">
+    
+    {/* Left button (e.g., plus icon) */}
+    <button
+      type="button"
+      className="composer-btn flex items-center justify-center text-gray-500 hover:text-gray-800 transition"
+      aria-label="Add files and more"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M9.33496 16.5V10.665H3.5C3.13273 10.665 2.83496 10.3673 2.83496 10C2.83496 9.63273 3.13273 9.33496 3.5 9.33496H9.33496V3.5C9.33496 3.13273 9.63273 2.83496 10 2.83496C10.3673 2.83496 10.665 3.13273 10.665 3.5V9.33496H16.5L16.6338 9.34863C16.9369 9.41057 17.165 9.67857 17.165 10C17.165 10.3214 16.9369 10.5894 16.6338 10.6514L16.5 10.665H10.665V16.5C10.665 16.8673 10.3673 17.165 10 17.165C9.63273 17.165 9.33496 16.8673 9.33496 16.5Z"></path>
+      </svg>
+    </button>
+
+    {/* Textarea (center) */}
+    <Textarea
+      ref={textareaRef}
+      value={input}
+      onChange={(e) => setInput(e.target.value)}
+      onKeyDown={handleKeyDown}
+      placeholder="Ask anything..."
+      className="resize-none w-full border-0 bg-transparent focus-visible:ring-0 focus:outline-none text-sm text-gray-900 placeholder:text-gray-400 dark:text-gray-100"
+      rows={1}
+      data-testid="input-chat-message"
+      aria-label="Type your message"
+        style={{ minHeight: "40px", lineHeight: "1.5" }} 
+    />
+
+    {/* Send button (right side) */}
+    <Button
+      size="icon"
+      onClick={handleSend}
+      disabled={!input.trim()}
+      data-testid="button-send-message"
+      aria-label="Send message"
+      className="flex-shrink-0 rounded-full bg-black text-white p-2 hover:bg-gray-800 disabled:opacity-30"
+    >
+      <Send className="h-5 w-5" />
+    </Button>
+  </div>
+</div>
+
     </div>
   );
 }
